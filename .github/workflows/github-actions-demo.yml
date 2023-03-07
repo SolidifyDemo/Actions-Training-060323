@@ -2,7 +2,11 @@ name: Github Actions Demo
 on: 
   push: 
     branches: [main]    
-
+  workflow_dispatch:
+    inputs:
+      abc:
+        type: text
+        required: true
   schedule:
     - cron : '15 6 * * 0'      
 
